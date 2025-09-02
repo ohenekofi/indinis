@@ -6,6 +6,14 @@
 
 **Indinis** is a high-performance, embedded NoSQL database for Node.js and TypeScript, featuring a fluent, Firestore-like API. It's designed to be fast, easy to use, and powerful enough for complex applications.
 
+## Install
+
+Install Indinis via npm:
+
+```bash
+npm i indinis
+```
+
 ### Key Features
 
 *   **Fluent, Type-Safe API**: A modern, chainable API that feels familiar and boosts productivity.
@@ -22,19 +30,19 @@
 2.  [Quick Start](#quick-start)
 3.  [Core Concepts: Stores and Items](#core-concepts-stores-and-items)
 4.  [Core API Guide](#core-api-guide)
-    *   [Creating Data](#creating-data)
-    *   [Reading Data](#reading-data)
-    *   [Updating Data](#updating-data)
-    *   [Deleting Data](#deleting-data)
+  *   [Creating Data](#creating-data)
+  *   [Reading Data](#reading-data)
+  *   [Updating Data](#updating-data)
+  *   [Deleting Data](#deleting-data)
 5.  [Querying Data](#querying-data)
-    *   [Filtering with `.filter()`](#filtering-with-filter)
-    *   [Querying Arrays](#querying-arrays)
-    *   [Sorting with `.sortBy()`](#sorting-with-sortby)
-    *   [Pagination](#pagination)
+  *   [Filtering with `.filter()`](#filtering-with-filter)
+  *   [Querying Arrays](#querying-arrays)
+  *   [Sorting with `.sortBy()`](#sorting-with-sortby)
+  *   [Pagination](#pagination)
 6.  [Advanced Topics](#advanced-topics)
-    *   [In-Memory Data Caching](#in-memory-data-caching)
-    *   [Indexing](#indexing)
-    *   [Composable Queries with `.use()`](#composable-queries-with-use)
+  *   [In-Memory Data Caching](#in-memory-data-caching)
+  *   [Indexing](#indexing)
+  *   [Composable Queries with `.use()`](#composable-queries-with-use)
 7.  [Configuration](#configuration)
 8.  [License](#license)
 
@@ -67,9 +75,9 @@ async function main() {
   // 2. Create a new user with an auto-generated ID
   console.log('Creating a new user...');
   const newUser = await usersStore.make({
-    name: 'Alice',
-    email: 'alice@example.com',
-    createdAt: Date.now()
+  name: 'Alice',
+  email: 'alice@example.com',
+  createdAt: Date.now()
   }).withSnapshot(); // .withSnapshot() returns the full document
 
   console.log('User created:', newUser);
@@ -82,8 +90,8 @@ async function main() {
   // 4. Query for the user by their email
   console.log('\nQuerying for user by email...');
   const userFromQuery = await usersStore
-    .filter('email').equals('alice@example.com')
-    .one();
+  .filter('email').equals('alice@example.com')
+  .one();
   console.log('Found via query:', userFromQuery);
 }
 
@@ -207,15 +215,7 @@ await postRef.modify({
   lastViewedBy: 'user-abc'
 });
 
-// You can also decrement
-await postRef.modify({ likes: increment(-1) });
-```
-
-### Deleting Data
-
-Use `.remove()` on an `ItemRef` to delete a document. The operation completes silently if the document doesn't exist.
-
-```typescript
+// You can also
 await db.store('users').item('user123').remove();
 ```
 
