@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist", // Or wherever your compiled JS goes
+    "rootDir": "./tssrc",
+    "baseUrl": ".", // IMPORTANT: Set baseUrl to the project root
+    "paths": {
+      "indinis": ["./tssrc/index"] // IMPORTANT: Map the module name 'indinis' to your source entry point
+    }
+  },
+  "include": ["tssrc/**/*", "debug_test.js"],
+  "exclude": ["node_modules", "**/*.test.ts"]
+}
+

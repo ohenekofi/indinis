@@ -1,0 +1,35 @@
+npx ts-node tssrc/example.ts #running example
+npx jest #running all test
+npm test -- tssrc/test/transaction.test.ts # running specific test
+npx jest -- tssrc/test/transaction.test.ts # running specific test
+
+npx jest -- tssrc/test/sstable_compression.test.ts # running specific test 
+
+
+
+
+npx jest -- tssrc/test/encryption_gcm_kdf.test.ts
+npx jest -- tssrc/test/encryption_password_change.test.ts
+
+npx jest -- tssrc/test/tiered_compaction.test.ts
+
+sstable_encryption_and_compression.test.ts
+
+
+concurrency_stress.test.ts
+
+tssrc/test/concurrency_stress.test.ts
+mvcc_timetravel.test.ts
+=================================================================================================
+PASSED TEST TO DEPLOY 
+================================================================================================
+passed test 6 july 2025 .. aftter vendoring.. 
+analytical_queries.test.ts
+wal_recovery.test.ts
+sstable_encryption_and_compression.test.ts
+encryption_password_change.test.ts
+tssrc/test/query_api_ranges_dsc_include.test.ts
+atomic_increment.test.
+query_api_multikey.test.ts
+indexing_backfill.test.ts
+concurrency_robust.test.ts
