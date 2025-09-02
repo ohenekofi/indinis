@@ -1,6 +1,6 @@
 {
   "name": "indinis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A storage library using LSM trees for storage and B-trees for indices with MVCC support",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
